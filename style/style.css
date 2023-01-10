@@ -1,0 +1,11 @@
+/* Shrikhand font pour le texte */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+/* Roboto font pour le texte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* VARIABLES POUR LES COULEURS*/
+:root {
+    --violet:#9356DC;
+    --rose:#FF79DA;
+    --vert: #99E2D0;
+}
