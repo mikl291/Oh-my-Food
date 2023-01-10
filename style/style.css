@@ -7,6 +7,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    text-decoration: none
 }
 .loader {
     position: fixed;
@@ -14,7 +15,6 @@
     width: 100%;
     left: 0;
     top: 0;
-    background-color: hsla(0,0%,100%,.9);
     animation: loader .01s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
@@ -33,9 +33,42 @@
 }
 .loader__item--2 {
     background-color: #ff79da;
-    animation-delay: .25s;
+    animation-delay: 0.25s;
 }
 .loader__item--3 {
     background-color: #99e2d0;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
 }
+/*************/
+
+
+    header {
+        border-bottom: 4px solid #f2f2f2;
+    }
+    .location{
+        background-color: #d2d2d2;
+        display: flex;
+        justify-content: center;
+    }
+    .fa-location-dot{
+        margin-left: 50px;
+    }
+    footer {
+        background-color: #353535;
+        width: 100%;
+        margin-left: 0px;
+}
+    .name {
+        font-family: Shrikhand;
+        color: white;
+        margin-left: 10px;
+}
+    .link {
+        display: flex;
+        flex-direction: column;
+        font-family: roboto;
+        font-weight: bold;
+        color: white;
+        margin-left: 10px;
+    }
+
