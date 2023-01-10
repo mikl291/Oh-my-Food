@@ -1,11 +1,56 @@
-/* Shrikhand font pour le texte */
+/* Shrikhand font pour logo et titres */
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-/* Roboto font pour le texte */
+/* Roboto font pour texte */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
 /* VARIABLES POUR LES COULEURS*/
 :root {
     --violet:#9356DC;
     --rose:#FF79DA;
     --vert: #99E2D0;
+}
+.loadScreen {
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
+}
+.spinnerBig {
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    border: 3rem solid rgba(161, 160, 160, 0);
+    border-top: 3rem solid var(--violet);
+    border-left: 3rem solid var(--violet);
+    border-bottom: 3rem solid var(--violet);
+    animation: spinneroff 0.8s 0.2s 5;
+}
+.spinner {
+    border: 2rem solid rgba(161, 160, 160, 0);
+    border-top: 2rem solid var(--rose);
+    border-right: 2rem solid var(--rose);
+    border-bottom: 2rem solid var(--rose);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    opacity: 1;
+    animation: spinner 0.8s 0.2s 5;
+    position: absolute;
+}
+.spinnerSmall {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1.5rem solid rgba(161, 160, 160, 0);
+    border-top: 1.5rem solid var(--vert);
+    border-left: 1.5rem solid var(--vert);
+    border-bottom: 1.5rem solid var(--vert);
+    animation: spinneroff 0.8s 0.2s 5;
 }
