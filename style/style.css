@@ -10,7 +10,7 @@
     text-decoration: none;
     list-style-type: none;
 }
-/*****************/
+/*****************
 .loader {
     position: fixed;
     height: 100%;
@@ -41,7 +41,7 @@
     background-color: #99e2d0;
     animation-delay: 0.5s;
 }
-    /*******************/
+    *******************/
 
 
 
@@ -69,27 +69,46 @@
         padding: 15px;
         box-shadow: 2px 2px 8px #353535;
     }
-    .presentation {
+    .presentation,
+    .restaurants {
         background-color: #f3f3f3;
         font-size: 18px;
         font-weight: 500;
         font-family: 'roboto';
-        text-align: center;
         padding: 15px 15px 15px 15px;
         margin-bottom: 0px;
     }
-    .presentation h1 {
-        padding: 0px 65px 0 65px;
+    .presentation h1{
         margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+        padding: 0 30px 0 30px;
+    }
+
+    .text h2,
+    .liste-menu h2,
+    .restaurants h2 {
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: -0.5px;
+        font-family: 'roboto';
+        background-clip: text;
     }
     .presentation p {
         margin-bottom: 20px;
-        padding: 0 60px 0 60px;
+        font-size: 20px;
+        text-align: center;
+        padding: 0 30px 0 30px;
     }
     .btn-search {
         display: flex;
         justify-content: center;
         margin-bottom: 35px;
+        transition: all 0.2s ease-in-out;
+    }
+    .btn-search :hover {
+        box-shadow: 0px 0px 8px 0px #000000;
+        cursor: pointer;
     }
     .button{ 
         width: 250px;
@@ -104,12 +123,14 @@
         font-weight: bold;
 
     }
-    .section_liste {
+    .liste-menu,
+    .restaurants {
         padding: 0px 20px 0px 20px;
         margin: 15px 0 50px 0;
         cursor: pointer;
     }
-    .section_liste li {
+    
+    .liste-menu li {
         align-items: center;
         width: 100%;
         margin-bottom: 20px;
@@ -119,34 +140,80 @@
         box-shadow: rgb(0 0 0 / 10%) 0px 10px 10px;
         transition: all 0.25s ease-in-out;
     }
-    .section_liste li div {
-            position: absolute;
-            left: 5px;
-            padding: 5px 10px 5px 10px;
-            border-radius: 50% ;
-            background-color: #9356DC;
-            color: #FFFFFF;
+    .liste-menu li div {
+        position: absolute;
+        left: 5px;
+        padding: 5px 10px 5px 10px;
+        border-radius: 50% ;
+        background-color: #9356DC;
+        color: #FFFFFF;
     }
     
-    .section_liste li i {
+    .liste-menu li i {
         color: gray;
         margin-left: 40px;
         margin-top: 5px;
         transition: all 0.4s ease-in-out;
     }
-    .section_liste li p {
+    .liste-menu li p {
         font-family: "Roboto";
         font-weight: bold;
         font-size: 18px;
         margin-left: 80px;
         margin-top: -20px;
     }
-
+    /**********************/
+    .restaurant {
+        background-color: #f3f3f3;
+        width: 100%;
+    }
+    .card-menu {
+        display: flex;
+        margin: 0 auto;
+        width: 50%;
+        cursor: pointer;
+    }
+    .card-menu:hover {
+        box-shadow: 0px 0px 8px 0px #000000;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    .card-menu img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+    .card-bottom {
+        background-color: white;
+        border-radius: 0px 0 20px 20px;
+        width: 100%;
+        height: 50px;
+        margin-top: -5px;
+        padding-top: 10px;
+        padding-left: 15px;
+        margin-bottom: 5px;
+        color: black;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .heart {
+        display: flex;
+        justify-content: right;
+        margin-top: -30px;
+        margin-right: 15px;
+        size: 100%;
+        color: grey;
+    }
+    .heart:hover {
+        color: #FF79DA;
+    }
+    
     /*******************/
     footer {
         background-color: #353535;
         width: 100%;
         margin-left: 0px;
+        margin-top: 25px;
+        text-decoration: none;
 }
     .name {
         font-family: Shrikhand;
@@ -160,6 +227,7 @@
         font-weight: bold;
         color: white;
         margin-left: 10px;
+        cursor: pointer;
     }
     .fa-solid {
         margin-right: 15px;
