@@ -1,0 +1,193 @@
+/* Shrikhand font pour logo et titres */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Roboto font pour texte */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "roboto";
+  color: #000;
+}
+
+main {
+  padding: 0 2rem;
+}
+
+h2 {
+  padding: 2rem 0;
+  margin: 0;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  text-align: center;
+  font-family: "Shrikhand";
+  box-shadow: 1px 3px 3px gray;
+  position: relative;
+}
+
+.city-search {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: lightgrey;
+  padding: 25px;
+}
+.city-search i {
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+
+.search {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  background-color: #f3f3f3;
+}
+.search h2 {
+  font-size: 22px;
+}
+.search p {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+button {
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: linear-gradient(#FF79DA 10%, #9356DC 90%);
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 8px 0px #000000;
+}
+
+button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.function {
+  margin-bottom: 50px;
+  counter-reset: steps;
+}
+.function h2 {
+  margin-bottom: 1.5rem;
+}
+.function ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .function ol {
+    flex-direction: column;
+  }
+}
+.function li {
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 1.2rem;
+  flex-grow: 1;
+  border-radius: 25px;
+  box-shadow: 0px 0px 8px 0px #000000;
+}
+.function li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50%;
+  position: relative;
+  left: -30px;
+}
+.function li:hover {
+  background-color: #e4d4f8;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.function li i.fa-solid {
+  margin-right: 25px;
+  color: gray;
+}
+.function li.fa-solid:hover {
+  background-color: #FF79DA;
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus .menu_card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 560px) {
+  .menus .menu_card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.menus .menu_card .new {
+  position: relative;
+}
+.menus .menu_card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  top: 1rem;
+  right: 1rem;
+}
+.menus .card_image {
+  height: 15rem;
+  background-size: cover;
+  border-radius: 1rem;
+}
+.menus .card_img1 {
+  background-image: url("../../img/menu-1.jpg");
+}
+.menus .card_img2 {
+  background-image: url("../../img/menu-2.jpg");
+}
+.menus .card_img3 {
+  background-image: url("../../img/menu-3.jpg");
+}
+.menus .card_img4 {
+  background-image: url("../../img/menu-4.jpg");
+}
+.menus .card-card_description h3,
+.menus .card-card_description p {
+  margin: 0.5rem;
+}
+.menus .card-card_description i {
+  font-size: 1.5rem;
+  position: relative;
+  right: 1rem;
+  top: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

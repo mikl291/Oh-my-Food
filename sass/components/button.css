@@ -1,0 +1,16 @@
+button {
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: linear-gradient(#FF79DA 10%, #9356DC 90%);
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 8px 0px #000000;
+}
+
+button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}/*# sourceMappingURL=button.css.map */

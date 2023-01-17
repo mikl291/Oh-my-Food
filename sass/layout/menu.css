@@ -1,0 +1,56 @@
+.menus {
+  background-color: #f6f6f6;
+}
+.menus .menu_card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 560px) {
+  .menus .menu_card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.menus .menu_card .new {
+  position: relative;
+}
+.menus .menu_card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  top: 1rem;
+  right: 1rem;
+}
+.menus .card_image {
+  height: 15rem;
+  background-size: cover;
+  border-radius: 1rem;
+}
+.menus .card_img1 {
+  background-image: url("../../img/menu-1.jpg");
+}
+.menus .card_img2 {
+  background-image: url("../../img/menu-2.jpg");
+}
+.menus .card_img3 {
+  background-image: url("../../img/menu-3.jpg");
+}
+.menus .card_img4 {
+  background-image: url("../../img/menu-4.jpg");
+}
+.menus .card-card_description h3,
+.menus .card-card_description p {
+  margin: 0.5rem;
+}
+.menus .card-card_description i {
+  font-size: 1.5rem;
+  position: relative;
+  right: 1rem;
+  top: 50%;
+  color: red;
+}/*# sourceMappingURL=menu.css.map */

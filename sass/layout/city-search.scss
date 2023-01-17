@@ -1,0 +1,13 @@
+.city-search {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: lightgrey;
+    padding: 25px;
+    & i {
+        font-size: 22px;
+        padding-bottom: 5px;
+    }
+}
