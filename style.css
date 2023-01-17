@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Shrikhand font pour logo et titres */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Roboto font pour texte */
@@ -59,7 +60,7 @@ header {
   padding-top: 15px;
   padding-bottom: 25px;
   margin-bottom: 25px;
-  background-color: #f3f3f3;
+  background-color: #f6f6f6;
 }
 .search h2 {
   font-size: 22px;
@@ -136,13 +137,17 @@ button:hover {
 
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .menus .menu_card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
-@media (max-width: 560px) {
+@media (min-width: 600px) {
   .menus .menu_card {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -162,10 +167,13 @@ button:hover {
   top: 1rem;
   right: 1rem;
 }
+.menus .card {
+  width: 100%;
+}
 .menus .card_image {
   height: 15rem;
+  border-radius: 1rem 1rem 0 0;
   background-size: cover;
-  border-radius: 1rem;
 }
 .menus .card_img1 {
   background-image: url("../../img/menu-1.jpg");
@@ -179,15 +187,45 @@ button:hover {
 .menus .card_img4 {
   background-image: url("../../img/menu-4.jpg");
 }
-.menus .card-card_description h3,
-.menus .card-card_description p {
+.menus .card_description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .card_description h3,
+.menus .card_description p {
   margin: 0.5rem;
 }
-.menus .card-card_description i {
-  font-size: 1.5rem;
-  position: relative;
+.menus .card_description h3 {
+  padding-top: 0.5rem;
+}
+.menus .card_description i {
+  font-size: 2rem;
+  position: absolute;
   right: 1rem;
   top: 50%;
+  transform: translateY(-50%);
+}
+
+footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 0 2.5rem;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans-sérif";
+  font-weight: 500;
+  font-size: 18px;
+}
+footer i {
+  margin-right: 10px;
+  font-size: 11px;
+}
+footer .fa-handshake-angle {
+  font-size: 11px;
+  margin-right: 5.5px;
 }
 
 /*# sourceMappingURL=style.css.map */

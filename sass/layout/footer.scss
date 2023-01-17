@@ -1,0 +1,22 @@
+@use "../utils/colors.scss";
+
+footer {
+    background-color: colors.$darkgrey;
+    color: colors.$white;
+    padding: 0 2.5rem;
+    h2 {
+        font-family: "Shrikhand", "sans-sérif";
+        font-weight: 500;
+        font-size: 18px;
+    }
+    i {
+        margin-right: 10px;
+        font-size:  11px;
+    }
+    .fa-handshake-angle {
+        font-size: 11px;
+        margin-right: 5.5px;
+    }
+    
+
+}

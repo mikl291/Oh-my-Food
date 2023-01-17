@@ -2,15 +2,19 @@
 @use "../utils/colors.scss";
 
 .menus {
-    background-color: #f6f6f6;
+    background-color: colors.$grey;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
     
     .menu_card{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        @media (max-width: variables.$breakpoint){
-            grid-template-columns: repeat(2, 1fr);
-        }
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    @media (min-width:variables.$mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
     .new {
          position: relative;
     }
@@ -28,27 +32,36 @@
     }
 }
     .card{
+            width: 100%;
         &_image {
             height: 15rem;
+            border-radius: 1rem 1rem 0 0;
             background-size: cover;
-            border-radius: 1rem;
         }
         @for $i from 1 through 4{ 
             &_img#{$i} {
                 background-image: url("../../img/menu-#{$i}.jpg");
         }
     }
-             &-card_description{
+        &_description{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: colors.$white;
+            border-radius: 0 0 1rem 1rem;
             h3,
             p {
           margin: 0.5rem;
             }
+            h3 {
+                padding-top: 0.5rem;
+            }
             i {
-                font-size: 1.5rem;
-                position: relative;
+                font-size: 2rem;
+                position: absolute;
                 right: 1rem;
                 top: 50%;
-                color: red;
+                transform: translateY(-50%)
             }        
             
         }

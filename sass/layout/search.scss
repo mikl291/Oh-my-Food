@@ -1,9 +1,11 @@
+@use "../utils/colors.scss";
+
 .search{
     text-align: center;
     padding-top: 15px;
     padding-bottom: 25px;
     margin-bottom: 25px;
-    background-color: #f3f3f3;
+    background-color: colors.$grey;
     & h2{
     font-size: 22px;
 }
