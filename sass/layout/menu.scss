@@ -34,12 +34,12 @@
     .card{
         &_image {
             height: 12rem;
-        width: 100%;
-        border: transparent solid 0px;
-        border-radius: 1rem 1rem 0 0;
-        box-shadow: none;
-        background-size: cover;
-        background-position: center;
+            width: 100%;
+            border: transparent solid 0px;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: none;
+            background-size: cover;
+            background-position: center;
         }
         @for $i from 1 through 4{ 
             &_img#{$i} {
