@@ -176,16 +176,16 @@ button:hover {
   background-size: cover;
 }
 .menus .card_img1 {
-  background-image: url("../../img/menu-1.jpg");
+  background-image: url("img/menu-1.jpg");
 }
 .menus .card_img2 {
-  background-image: url("../../img/menu-2.jpg");
+  background-image: url("img/menu-2.jpg");
 }
 .menus .card_img3 {
-  background-image: url("../../img/menu-3.jpg");
+  background-image: url("img/menu-3.jpg");
 }
 .menus .card_img4 {
-  background-image: url("../../img/menu-4.jpg");
+  background-image: url("img/menu-4.jpg");
 }
 .menus .card_description {
   position: relative;
