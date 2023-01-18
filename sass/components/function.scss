@@ -1,19 +1,25 @@
 @use "../utils/boxshadow.scss";
 @use "../utils/hover.scss";
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
 
 .function{
-    margin-bottom: 50px;
+    padding: 2rem 1rem;
     counter-reset: steps;
     h2 {
         margin-bottom: 1.5rem;
     }
     & ol{
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        @media (max-width: 900px){
-            flex-direction: column;
-        }
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 0  2rem 1rem;
+        margin: -6px 0 5px 0;
+        @media (min-width: variables.$screen){
+            display: flex;
+            flex-direction: row
+            
+            }
     }
         & li {
             &::before{
@@ -24,24 +30,28 @@
                 padding: 5px 10px 5px 10px;
                 border-radius: 50%;
                 position: relative;
-                left: -30px;
+                left: -45px;
             }
+        height: 4.5rem;
+        font-size: 15px;
+        font-weight: bold;
+        position: relative;
+        display: flex;
+        align-items: center;
         list-style-type: none;
-        background-color: #f6f6f6;
-        padding: 1.2rem;
+        padding: 1.2rem 2rem;
         flex-grow: 1;
-        border-radius: 25px;
-        @include boxshadow.base-shadow;    
-        &:hover{
-            @include hover.hover;
-        }    
+        border-radius: 1rem;
+        @include boxshadow.base-shadow;
+        background-color: #f6f6f6;
         & i.fa-solid{
-            margin-right: 25px;
+            margin: 0 1.7rem 0 -0.6rem;
+            font-size: 1.2rem;
             color: gray; 
         }
-        &.fa-solid:hover {
-                background-color: #FF79DA;
-            }
+        &:hover{
+            @include hover.hover;
+        }   
         }
     }
 
