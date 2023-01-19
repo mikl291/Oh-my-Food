@@ -368,7 +368,7 @@ body {
 }
 #page-resto .resto__title h2:hover::after {
   opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.2);
 }
 #page-resto .resto-main {
   padding: 0 1rem;
