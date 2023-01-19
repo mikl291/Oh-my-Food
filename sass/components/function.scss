@@ -1,5 +1,4 @@
-@use "../utils/boxshadow.scss";
-@use "../utils/hover.scss";
+@use "../utils/mixins.scss";
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
 
@@ -15,13 +14,12 @@
         gap: 1.5rem;
         padding: 0 0  2rem 1rem;
         margin: -6px 0 5px 0;
-        @media (min-width: variables.$screen){
+        @media (max-width: variables.$screen){
             display: flex;
-            flex-direction: row
-            
-            }
+        }
     }
         & li {
+            position: relative;
             &::before{
                 content: counter(steps);
                 counter-increment: steps;   
@@ -42,16 +40,20 @@
         padding: 1.2rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
-        @include boxshadow.base-shadow;
+        @include mixins.base-shadow;
         background-color: #f6f6f6;
         & i.fa-solid{
             margin: 0 1.7rem 0 -0.6rem;
-            font-size: 1.2rem;
+            font-size: 1.2;
             color: gray; 
         }
         &:hover{
-            @include hover.hover;
+            @include mixins.hover;
+            i{
+                color: #9356DC;
+            }
         }   
+
         }
     }
 

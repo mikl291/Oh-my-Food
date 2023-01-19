@@ -5,9 +5,13 @@
   justify-content: center;
   gap: 1rem;
   background-color: lightgrey;
-  padding: 25px;
+  color: grey;
 }
 .city-search i {
   font-size: 22px;
   padding-bottom: 5px;
+  color: black;
+}
+.city-search h2 {
+  font-weight: 500;
 }/*# sourceMappingURL=city-search.css.map */

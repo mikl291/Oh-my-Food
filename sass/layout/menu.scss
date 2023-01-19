@@ -1,5 +1,6 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
+@use "../utils/mixins.scss";
 
 .menus {
     background-color: colors.$grey;
@@ -52,21 +53,24 @@
             flex-direction: column;
             background-color: colors.$white;
             border-radius: 0 0 1rem 1rem;
+            &::before {
+                @include mixins.heart;
+            }
+            &::after {
+                @include mixins.heart;
+                @include mixins.gradient;
+                opacity: 0;
+                color: transparent;
+                font-weight: 900;
+            }
+            &:hover::after {
+                opacity: 1;
+            }
+        } 
             h3,
             p {
-          margin: 0.5rem;
-            }
-            h3 {
                 padding-top: 0.5rem;
+                padding-left: 0.5rem;
             }
-            i {
-                font-size: 2rem;
-                position: absolute;
-                right: 1rem;
-                top: 50%;
-                transform: translateY(-50%)
-            }        
-            
-        }
     }
 }

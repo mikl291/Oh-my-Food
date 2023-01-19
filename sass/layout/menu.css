@@ -1,12 +1,17 @@
 .menus {
   background-color: #f6f6f6;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 .menus .menu_card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
 }
-@media (max-width: 560px) {
+@media (min-width: 1024px) {
   .menus .menu_card {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -27,30 +32,82 @@
   right: 1rem;
 }
 .menus .card_image {
-  height: 15rem;
+  height: 12rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
   background-size: cover;
-  border-radius: 1rem;
+  background-position: center;
 }
 .menus .card_img1 {
-  background-image: url("../../img/menu-1.jpg");
+  background-image: url("img/menu-1.jpg");
 }
 .menus .card_img2 {
-  background-image: url("../../img/menu-2.jpg");
+  background-image: url("img/menu-2.jpg");
 }
 .menus .card_img3 {
-  background-image: url("../../img/menu-3.jpg");
+  background-image: url("img/menu-3.jpg");
 }
 .menus .card_img4 {
-  background-image: url("../../img/menu-4.jpg");
+  background-image: url("img/menu-4.jpg");
 }
-.menus .card-card_description h3,
-.menus .card-card_description p {
-  margin: 0.5rem;
-}
-.menus .card-card_description i {
-  font-size: 1.5rem;
+.menus .card_description {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .card_description::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
   right: 1rem;
-  top: 50%;
-  color: red;
+  top: 43%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.menus .card_description::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 43%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+}
+.menus .card_description:hover::after {
+  opacity: 1;
+}
+.menus .card h3,
+.menus .card p {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
 }/*# sourceMappingURL=menu.css.map */

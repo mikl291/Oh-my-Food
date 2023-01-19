@@ -1,12 +1,13 @@
 @use "../utils/colors.scss";
+@use "../utils/variables.scss";
 
 footer {
     background-color: colors.$darkgrey;
     color: colors.$white;
-    padding: 0 2.5rem;
-    margin: 0 33px;
+    padding: 0 0 1rem 2.5rem;
+    margin: 0 auto;
     h2 {
-        font-family: "Shrikhand", "sans-sérif";
+        font-family: "Shrikhand", sans-serif;
         font-weight: 500;
         font-size: 18px;
     }
@@ -18,6 +19,9 @@ footer {
         font-size: 11px;
         margin-right: 5.5px;
     }
+    @media (min-width:variables.$screen) {
+        grid-template-columns: repeat(2, 1fr);
+  }
     
 
 }

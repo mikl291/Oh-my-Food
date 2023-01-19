@@ -1,4 +1,5 @@
-@use "../utils/boxshadow.scss";
+@use "../utils/mixins.scss";
+
 
 button {
     width: 200px;
@@ -6,13 +7,11 @@ button {
     border-radius: 50px;
     border: none;
     color: white;
-    background: linear-gradient(#FF79DA 10%, #9356DC 90%);    
     text-align: center;
     margin-bottom: 15px;
-    @include boxshadow.base-shadow;
-}
-
-button:hover {
-    transform: scale(1.02);
-    cursor: pointer;
+    @include mixins.gradient;
+    @include mixins.base-shadow;
+    &:hover {
+        @include mixins.hover;
+    }
 }
