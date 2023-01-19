@@ -14,7 +14,11 @@
         column-gap: 2rem;
         row-gap: 2rem;
     @media (min-width:variables.$screen) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        .card {
+            width: 100%;
+            height: 15rem;
+        }
   }
     .new {
          position: relative;
