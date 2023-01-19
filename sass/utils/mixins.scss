@@ -1,34 +1,75 @@
+@use "./colors";
+
 @mixin gradient {
-    background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(
+    to top,
+    rgba(147, 86, 220),
+    rgba(255, 121, 218)
+  );
+}
+@mixin box-shadow {
+  box-shadow: 0px 0px 3px colors.$darkgrey;
+}
+@mixin hover($zoom-level: 1.02, $transformation: null) {
+  transform: $transformation scale($zoom-level);
 }
 
-@mixin base-shadow {
-    box-shadow: 0px 0px 5px 0px #000000;
-}
-
-@mixin hover {
-    background-color: #e4d4f8;
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-@mixin heart {
+@mixin font-awesome($font-weight: 400) {
     display: inline-block;
+    position: absolute;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 400; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: $font-weight;
+  }
+
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+    @include font-awesome($font-weight);
     content: "\f004";
     font-size: 2rem;
-    position: absolute;
     right: 1rem;
-    top: 43%;
+    top: 50%;
     transform: translateY(-50%);
-    color: inherit;
+    color: $color;
     background-clip: text;
     -webkit-background-clip: text;
-    opacity: 1;
+    opacity: $opacity;
     transition: all 200ms ease-in-out;
-}
+  }
+  
+  @mixin heart-animated {
+    position: relative;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+    &::before {
+      @include heart;
+    }
+    &::after {
+      @include heart($opacity: 0, $font-weight: 900, $color: transparent);
+      @include gradient;
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+
+  @mixin base-button {
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    transition: transform 200ms;
+    margin-top: 1rem;
+    cursor: pointer;
+    @include box-shadow;
+    @include gradient;
+    &:hover {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+  }

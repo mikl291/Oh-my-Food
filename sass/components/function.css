@@ -29,8 +29,8 @@
   padding: 1.2rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 0px 0px 5px 0px #000000;
   background-color: #f6f6f6;
+  box-shadow: 2px 1px 8px #f6f6f6;
 }
 .function li::before {
   content: counter(steps);
@@ -50,7 +50,6 @@
 .function li:hover {
   background-color: #e4d4f8;
   transform: scale(1.02);
-  cursor: pointer;
 }
 .function li:hover i {
   color: #9356DC;
