@@ -8,9 +8,14 @@
   );
 }
 @mixin box-shadow {
-  box-shadow: 0px 0px 3px colors.$darkgrey;
+  box-shadow: 0px 2px 8px colors.$darkgrey;
 }
-@mixin hover($zoom-level: 1.02, $transformation: null) {
+
+@mixin shadow-card {
+  box-shadow: 0px 3px 8px 1px gray;
+}
+
+@mixin hover($zoom-level: 1.01, $transformation: null) {
   transform: $transformation scale($zoom-level);
 }
 
