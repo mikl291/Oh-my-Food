@@ -73,21 +73,6 @@ header {
   padding-bottom: 20px;
 }
 
-button {
-  width: 200px;
-  padding: 10px 10px 10px 10px;
-  border-radius: 50px;
-  border: none;
-  color: white;
-  text-align: center;
-  margin-bottom: 15px;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-  box-shadow: 0px 2px 8px #353535;
-}
-button:hover {
-  transform: scale(1.01);
-}
-
 .function {
   padding: 2rem 1rem;
   counter-reset: steps;
@@ -154,7 +139,8 @@ button:hover {
 .menus .menu_card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   row-gap: 2rem;
   padding-right: 1rem;
 }
@@ -312,6 +298,21 @@ footer .fa-handshake-angle {
   margin-right: 5.5px;
 }
 
+button {
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  box-shadow: 0px 2px 8px #353535;
+}
+button:hover {
+  transform: scale(1.01);
+}
+
 body {
   background-color: #f6f6f6;
 }
@@ -338,9 +339,11 @@ body {
 #page-resto .banner img {
   display: block;
   width: 100%;
-  height: 70vh;
-  object-fit: cover;
-  object-position: center;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 #page-resto .resto__title {
   margin-top: -2rem;
@@ -437,17 +440,22 @@ body {
   overflow: hidden;
   margin: 0.5rem;
   box-shadow: 0px 2px 8px #353535;
-  animation: appear 1s;
-  animation-fill-mode: both;
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(1) {
-  animation-delay: 100ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(2) {
-  animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(3) {
-  animation-delay: 300ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__price {
   margin-left: auto;
@@ -524,7 +532,8 @@ body {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 200ms 3s forwards;
+  -webkit-animation: disappear 200ms 3s forwards;
+          animation: disappear 200ms 3s forwards;
   transform-origin: top;
 }
 .loader::after {
@@ -535,8 +544,16 @@ body {
   width: 100px;
   border-bottom: 5px solid #9356DC;
   border-radius: 50%;
-  animation: spin 1s ease-in-out;
-  animation-iteration-count: 3;
+  -webkit-animation: spin 1s ease-in-out;
+          animation: spin 1s ease-in-out;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes disappear {
+  to {
+    transform: scale(0);
+  }
 }
 
 @keyframes disappear {
@@ -544,9 +561,24 @@ body {
     transform: scale(0);
   }
 }
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes appear {
@@ -558,6 +590,4 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

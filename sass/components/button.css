@@ -1,0 +1,14 @@
+button {
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  box-shadow: 0px 2px 8px #353535;
+}
+button:hover {
+  transform: scale(1.01);
+}/*# sourceMappingURL=button.css.map */

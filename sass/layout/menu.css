@@ -1,0 +1,127 @@
+.menus {
+  background-color: #f6f6f6;
+  padding: 0rem 0rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.menus .menu_card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
+  padding-right: 1rem;
+}
+@media (min-width: 1024px) {
+  .menus .menu_card {
+    margin-bottom: 10rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .menus .menu_card .card {
+    width: 100%;
+    height: 20rem;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+}
+.menus .menu_card .new {
+  position: relative;
+}
+.menus .menu_card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  top: 1rem;
+  right: 1rem;
+}
+.menus .card_image {
+  height: 13rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 1024px) {
+  .menus .card_image {
+    height: 25rem;
+  }
+}
+.menus .card_img1 {
+  background-image: url("img/menu-1.jpg");
+}
+.menus .card_img2 {
+  background-image: url("img/menu-2.jpg");
+}
+.menus .card_img3 {
+  background-image: url("img/menu-3.jpg");
+}
+.menus .card_img4 {
+  background-image: url("img/menu-4.jpg");
+}
+.menus .card_description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  box-shadow: 0px 3px 8px 1px gray;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .card_description::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.menus .card_description::after {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+}
+.menus .card_description:hover::after {
+  opacity: 1;
+}
+.menus .card h3,
+.menus .card p {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}/*# sourceMappingURL=menu.css.map */
