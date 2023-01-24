@@ -1,4 +1,5 @@
 @use "../utils/colors.scss";
+@use "../utils/mixins.scss";
 
 .search{
     text-align: center;
@@ -13,5 +14,10 @@
     font-size: 18px;
     padding-bottom: 20px;
 }
-
+    button {
+        @include mixins.base-button;
+        &:hover{
+            @include mixins.hover-button;
+        }
+    }
 }
