@@ -42,7 +42,7 @@ body {
   }
 
   .resto-main {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
   }
   .menus {
     display: grid;
@@ -134,12 +134,14 @@ body {
     }
   }
 
-  section.order {
-    height: 30vh;
-    display: grid;
-    place-items: center;
+ 
     button {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
       @include mixins.base-button;
+      &:hover {
+        @include mixins.hover-button;
+      }
     }
   }
-}
