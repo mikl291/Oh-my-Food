@@ -2,27 +2,27 @@
   position: fixed;
   display: grid;
   place-items: center;
-  background-color: #99E2D0;
+  background-color: #f6f6f6;
   width: 100%;
   height: 100%;
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  -webkit-animation: disappear 200ms 12s forwards;
-          animation: disappear 200ms 12s forwards;
+  -webkit-animation: disappear 200ms 3s forwards;
+          animation: disappear 200ms 3s forwards;
   transform-origin: top;
 }
 .loader::after {
   content: "";
-  color: #353535;
-  height: 100%;
-  width: 100%;
+  height: 100px;
+  width: 100px;
   border-bottom: 5px solid #9356DC;
-  border-radius: 50%;
-  -webkit-animation: spin 2s ease-in-out;
-          animation: spin 2s ease-in-out;
-  -webkit-animation-iteration-count: 6;
-          animation-iteration-count: 6;
+  border-top: 5px solid #FF79DA;
+  border-radius: 100%;
+  -webkit-animation: spin 1s ease-in-out;
+          animation: spin 1s ease-in-out;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
 }
 
 @-webkit-keyframes disappear {
@@ -48,7 +48,7 @@
 }
 @-webkit-keyframes appear {
   0% {
-    transform: translateY(100%);
+    transform: translateY(50%);
     opacity: 0;
   }
   100% {
@@ -58,10 +58,11 @@
 }
 @keyframes appear {
   0% {
-    transform: translateY(100%);
+    transform: translateY(50%);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
   }
+}/*# sourceMappingURL=loader.css.map */
