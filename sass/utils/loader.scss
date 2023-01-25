@@ -1,6 +1,6 @@
 @use "../utils/colors.scss";
 .loader {
-    $animation-duration: 1s;
+    $animation-duration: 2.5s;
     $animation-count: 3;
     position: fixed;
     display: grid;
