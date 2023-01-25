@@ -14,20 +14,24 @@
 }
 @media (min-width: 1024px) {
   .menus .menu_card {
-    margin-bottom: 10rem;
+    margin-bottom: 0rem;
     grid-template-columns: repeat(4, 1fr);
   }
   .menus .menu_card .card {
     width: 100%;
-    height: 20rem;
     border-radius: 25px;
     cursor: pointer;
   }
+  .menus .menu_card .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 12px 8px #353535;
+    filter: opacity(0.5);
+  }
 }
-.menus .menu_card .new {
+.menus .new {
   position: relative;
 }
-.menus .menu_card .new::before {
+.menus .new::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -39,7 +43,8 @@
   top: 1rem;
   right: 1rem;
 }
-.menus .card_image {
+
+.card_image {
   height: 13rem;
   width: 100%;
   border: transparent solid 0px;
@@ -48,32 +53,27 @@
   background-size: cover;
   background-position: center;
 }
-@media (min-width: 1024px) {
-  .menus .card_image {
-    height: 25rem;
-  }
-}
-.menus .card_img1 {
+.card_img1 {
   background-image: url("img/menu-1.jpg");
 }
-.menus .card_img2 {
+.card_img2 {
   background-image: url("img/menu-2.jpg");
 }
-.menus .card_img3 {
+.card_img3 {
   background-image: url("img/menu-3.jpg");
 }
-.menus .card_img4 {
+.card_img4 {
   background-image: url("img/menu-4.jpg");
 }
-.menus .card_description {
+.card_description {
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #FFF;
-  box-shadow: 0px 3px 8px 1px gray;
+  box-shadow: 0px 3px 8px 1px #353535;
   border-radius: 0 0 1rem 1rem;
 }
-.menus .card_description::before {
+.card_description::before {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -93,7 +93,7 @@
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.menus .card_description::after {
+.card_description::after {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -117,11 +117,11 @@
   color: transparent;
   font-weight: 900;
 }
-.menus .card_description:hover::after {
+.card_description:hover::after {
   opacity: 1;
 }
-.menus .card h3,
-.menus .card p {
+.card h3,
+.card p {
   padding-top: 0.5rem;
   padding-left: 0.5rem;
 }/*# sourceMappingURL=menu.css.map */

@@ -11,4 +11,20 @@
 .search p {
   font-size: 18px;
   padding-bottom: 20px;
+}
+.search button {
+  color: white;
+  font-weight: 300;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px #353535;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.search button:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 5px #9356DC;
 }/*# sourceMappingURL=search.css.map */

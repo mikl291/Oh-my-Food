@@ -29,7 +29,6 @@
 @mixin hover-card {
   transform: scale(1.03);
   box-shadow: 0px 0px 12px 8px colors.$darkgrey;
-  filter:opacity(0.5);
 }
 
 
