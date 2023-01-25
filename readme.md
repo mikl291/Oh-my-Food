@@ -21,8 +21,6 @@
 -  #F6F6F6 → $lightgrey
 -  #353535 → $darkgrey
 
-
-
 ## Install
 
     git clone https://github.com/mikl291/Oh-my-Food.git
