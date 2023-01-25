@@ -5,7 +5,7 @@
 ![Alt text](img/readme/readme.png)
 
 ## Live demo 
- [here](https://mikl291.github.io/Oh-my-Food/)
+ Live demo available [here](https://mikl291.github.io/Oh-my-Food/)
 
 ## Technologies Used
    - HTML 
