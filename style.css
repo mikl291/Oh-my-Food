@@ -135,7 +135,7 @@ header {
 }
 .function li i.fa-solid {
   margin: 0 1.7rem 0 -0.6rem;
-  font-size: 1.2;
+  font-size: 1.2rem;
   color: gray;
 }
 .function li:hover {
