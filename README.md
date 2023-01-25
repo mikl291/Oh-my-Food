@@ -6,6 +6,17 @@ Home page screen for mobile
 
 ![screencapture-mikl291-github-io-Oh-my-Food-2023-01-25-01_35_49](https://user-images.githubusercontent.com/117902678/214453537-9cf617c0-7ab2-4e6a-bfd3-5410882c24fb.png)
 
+
+# Oh my Food
+Third project of web developer on OpenClassrooms
+
+Mobile first model
+
+
+Inspiration for the desktop model
+
+
+
 # Technologies
 HTML / CSS / Sass
 
