@@ -6,7 +6,6 @@ footer {
 }
 @media (min-width: 1024px) {
   footer {
-    position: relative;
     display: flex;
     flex-direction: row;
     padding-top: 15px;

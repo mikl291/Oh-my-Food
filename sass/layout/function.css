@@ -50,6 +50,7 @@
 .function li:hover {
   background-color: #e4d4f8;
   transform: scale(1.01);
+  cursor: pointer;
 }
 .function li:hover i {
   color: #9356DC;

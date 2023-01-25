@@ -11,4 +11,5 @@ button {
 }
 button:hover {
   transform: scale(1.01);
+  cursor: pointer;
 }/*# sourceMappingURL=button.css.map */
