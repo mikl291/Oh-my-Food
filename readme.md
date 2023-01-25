@@ -2,7 +2,7 @@
 
 
 #### Screenshots
-![Alt text](img/readme.png)
+![Alt text](img/readme/readme.png)
 
 ## Live demo 
  [here](https://mikl291.github.io/Oh-my-Food/)
