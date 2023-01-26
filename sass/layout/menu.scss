@@ -67,6 +67,7 @@
             background-color: colors.$white;
             @include mixins.shadow-card;
             border-radius: 0 0 1rem 1rem;
+            padding: 0.5rem 0;
             
             &::before {
                 @include mixins.heart;
@@ -84,8 +85,8 @@
         } 
             h3,
             p {
-                padding-top: 0.5rem;
-                padding-left: 0.5rem;
+                padding: 0.2rem 1rem;
             }
+            
     }
 
