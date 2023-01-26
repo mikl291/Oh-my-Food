@@ -135,7 +135,7 @@ header {
 }
 .function li i.fa-solid {
   margin: 0 1.7rem 0 -0.6rem;
-  font-size: 1.2rem;
+  font-size: 1.2;
   color: gray;
 }
 .function li:hover {
@@ -156,8 +156,7 @@ header {
 .menus .menu_card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
   row-gap: 2rem;
   padding-right: 1rem;
 }
@@ -220,6 +219,7 @@ header {
   background-color: #FFF;
   box-shadow: 0px 3px 8px 1px #353535;
   border-radius: 0 0 1rem 1rem;
+  padding: 0.5rem 0;
 }
 .card_description::before {
   display: inline-block;
@@ -270,8 +270,7 @@ header {
 }
 .card h3,
 .card p {
-  padding-top: 0.5rem;
-  padding-left: 0.5rem;
+  padding: 0.2rem 1rem;
 }
 
 footer {
@@ -359,10 +358,8 @@ body {
   display: block;
   width: 100%;
   height: 25rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 #page-resto .resto__title {
   margin-top: -2rem;
@@ -459,22 +456,17 @@ body {
   overflow: hidden;
   margin: 0.5rem;
   box-shadow: 0px 2px 8px #353535;
-  -webkit-animation: appear 1s;
-          animation: appear 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation: appear 1s;
+  animation-fill-mode: both;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(1) {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+  animation-delay: 100ms;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(2) {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  animation-delay: 200ms;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(3) {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__price {
   margin-left: auto;
@@ -507,8 +499,8 @@ body {
   display: grid;
   place-items: center;
   background: white;
-  height: 1rem;
-  width: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 1rem;
   color: #99E2D0;
 }
@@ -548,8 +540,7 @@ body {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  -webkit-animation: disappear 200ms 7.5s forwards;
-          animation: disappear 200ms 7.5s forwards;
+  animation: disappear 200ms 7.5s forwards;
   transform-origin: top;
 }
 .loader::after {
@@ -559,16 +550,8 @@ body {
   border-bottom: 5px solid #9356DC;
   border-top: 5px solid #FF79DA;
   border-radius: 100%;
-  -webkit-animation: spin 2.5s ease-in-out;
-          animation: spin 2.5s ease-in-out;
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
-}
-
-@-webkit-keyframes disappear {
-  to {
-    transform: scale(0);
-  }
+  animation: spin 2.5s ease-in-out;
+  animation-iteration-count: 3;
 }
 
 @keyframes disappear {
@@ -576,24 +559,9 @@ body {
     transform: scale(0);
   }
 }
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes appear {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 @keyframes appear {
@@ -605,4 +573,6 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
