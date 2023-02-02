@@ -156,7 +156,8 @@ header {
 .menus .menu_card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   row-gap: 2rem;
   padding-right: 1rem;
 }
@@ -358,8 +359,10 @@ body {
   display: block;
   width: 100%;
   height: 25rem;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 #page-resto .resto__title {
   margin-top: -2rem;
@@ -456,17 +459,22 @@ body {
   overflow: hidden;
   margin: 0.5rem;
   box-shadow: 0px 2px 8px #353535;
-  animation: appear 1s;
-  animation-fill-mode: both;
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(1) {
-  animation-delay: 100ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(2) {
-  animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(3) {
-  animation-delay: 300ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__price {
   margin-left: auto;
@@ -494,6 +502,11 @@ body {
   margin-right: -4rem;
   width: 4rem;
   transition: margin-right 0.5s;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__check i {
   display: grid;
@@ -509,6 +522,26 @@ body {
 }
 #page-resto .menus .menus__category .menu-item:hover .menu-item__check {
   margin-right: 0;
+}
+#page-resto .menus .menus__category .menu-item:hover i {
+  -webkit-animation: quarterspin 0.5s ease-in-out;
+          animation: quarterspin 0.5s ease-in-out;
+}
+@-webkit-keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 #page-resto button {
   display: flex;
@@ -540,7 +573,8 @@ body {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 200ms 7.5s forwards;
+  -webkit-animation: disappear 200ms 7.5s forwards;
+          animation: disappear 200ms 7.5s forwards;
   transform-origin: top;
 }
 .loader::after {
@@ -550,8 +584,16 @@ body {
   border-bottom: 5px solid #9356DC;
   border-top: 5px solid #FF79DA;
   border-radius: 100%;
-  animation: spin 2.5s ease-in-out;
-  animation-iteration-count: 3;
+  -webkit-animation: spin 2.5s ease-in-out;
+          animation: spin 2.5s ease-in-out;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes disappear {
+  to {
+    transform: scale(0);
+  }
 }
 
 @keyframes disappear {
@@ -559,9 +601,24 @@ body {
     transform: scale(0);
   }
 }
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes appear {
@@ -573,6 +630,4 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
